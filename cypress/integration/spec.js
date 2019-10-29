@@ -12,8 +12,8 @@ describe('Sapper template app', () => {
 		cy.url().should('include', '/about');
 	});
 
-	it('navigates to /menu', () => {
-		cy.get('nav a').contains('menu').click();
-		cy.url().should('include', '/menu');
+	it('navigates to /highlights', () => {
+		cy.get('nav a').contains('highlights').click();
+		cy.url().should('include', '/highlights');
 	});
 });

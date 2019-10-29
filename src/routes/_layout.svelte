@@ -27,15 +27,15 @@
   const bp = breakpoint();
   $: path = $page.path;
 
-  const menu = [{ to: "/about", text: "About" }, { to: "/menu", text: "Menu" }];
+  const highlights = [{ to: "/about", text: "About" }, { to: "/highlights", text: "Highlights" }];
 
-  const topMenu = [
+  const tophighlights = [
     { to: "/about", text: "About" },
-    { to: "/menu", text: "Menu" }
+    { to: "/highlights", text: "Highlights" }
   ];
 </script>
 
-{#each menu as link}
+{#each highlights as link}
   <a href={link.to} class="hidden">{link.text}</a>
 {/each}
 
@@ -53,10 +53,10 @@
     <h6 class="pl-3 text-white tracking-widest font-thin text-lg">Paul's Full Stack Prep Shack</h6>
   </a>
   <Spacer />
-  <Tabs navigation items={topMenu} bind:selected={path} />
+  <Tabs navigation items={tophighlights} bind:selected={path} />
   <div class="md:hidden">
     <Button
-      icon="menu"
+      icon="highlights"
       small
       flat
       add="text-white"
@@ -81,7 +81,7 @@
       breakpoint={$bp}>
       <h6 class="p-6 ml-1 pb-2 text-xs text-gray-900"> </h6>
       <hr>
-      <List items={menu}>
+      <List items={highlights}>
         <span slot="item" let:item class="cursor-pointer">
           <a href={item.to}>
             <ListItem

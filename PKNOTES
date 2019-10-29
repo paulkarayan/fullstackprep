@@ -1,0 +1,9 @@
+# setup first time
+npx degit matyunya/smelte-sapper-template smelte-play
+cd smelte-play
+
+# run anytime
+npm install && npm run dev
+# yarn && yarn dev
+
+

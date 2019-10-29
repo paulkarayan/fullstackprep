@@ -27,7 +27,9 @@
   const bp = breakpoint();
   $: path = $page.path;
 
-  const highlights = [{ to: "/about", text: "About" }, { to: "/highlights", text: "Highlights" }];
+  const projects = [
+                       { to: "/coinflip", text: "Coin Flip" }
+                  ];
 
   const tophighlights = [
     { to: "/about", text: "About" },
@@ -35,7 +37,7 @@
   ];
 </script>
 
-{#each highlights as link}
+{#each projects as link}
   <a href={link.to} class="hidden">{link.text}</a>
 {/each}
 
@@ -81,7 +83,21 @@
       breakpoint={$bp}>
       <h6 class="p-6 ml-1 pb-2 text-xs text-gray-900"> </h6>
       <hr>
-      <List items={highlights}>
+      <List items={tophighlights}>
+        <span slot="item" let:item class="cursor-pointer">
+          <a href={item.to}>
+            <ListItem
+              selected={path.includes(item.to)}
+              {...item}
+              dense
+              navigation />
+          </a>
+        </span>
+      </List>
+      
+      <hr>
+
+      <List items={projects}>
         <span slot="item" let:item class="cursor-pointer">
           <a href={item.to}>
             <ListItem

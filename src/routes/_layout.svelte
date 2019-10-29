@@ -27,11 +27,11 @@
   const bp = breakpoint();
   $: path = $page.path;
 
-  const menu = [{ to: "/about", text: "About" }, { to: "/blog", text: "Blog" }];
+  const menu = [{ to: "/about", text: "About" }, { to: "/menu", text: "Menu" }];
 
   const topMenu = [
     { to: "/about", text: "About" },
-    { to: "/blog", text: "Blog" }
+    { to: "/menu", text: "Menu" }
   ];
 </script>
 
@@ -79,7 +79,8 @@
       persistent={$persistent}
       elevation={$elevation}
       breakpoint={$bp}>
-      <h6 class="p-6 ml-1 pb-2 text-xs text-gray-900">Menu</h6>
+      <h6 class="p-6 ml-1 pb-2 text-xs text-gray-900"> </h6>
+      <hr>
       <List items={menu}>
         <span slot="item" let:item class="cursor-pointer">
           <a href={item.to}>

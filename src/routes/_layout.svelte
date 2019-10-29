@@ -40,7 +40,7 @@
 {/each}
 
 <svelte:head>
-  <title>Paul's Full Stack Prep</title>
+  <title>Paul's Full Stack Prep Shack</title>
 </svelte:head>
 
 {#if $preloading}
@@ -50,7 +50,7 @@
 <AppBar>
   <a href="." class="px-2 md:px-8 flex items-center">
     <img src="/logo.png" alt="Smelte logo" width="44" />
-    <h6 class="pl-3 text-white tracking-widest font-thin text-lg">Paul's Full Stack Prep</h6>
+    <h6 class="pl-3 text-white tracking-widest font-thin text-lg">Paul's Full Stack Prep Shack</h6>
   </a>
   <Spacer />
   <Tabs navigation items={topMenu} bind:selected={path} />

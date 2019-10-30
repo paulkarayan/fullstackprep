@@ -1,3 +1,4 @@
+## Smelte
 # setup first time
 npx degit matyunya/smelte-sapper-template smelte-play
 cd smelte-play
@@ -7,3 +8,6 @@ npm install && npm run dev
 # yarn && yarn dev
 
 
+## Flask Server
+
+python backend/server.py

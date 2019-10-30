@@ -30,12 +30,12 @@
   Heads {heads}
   Tails {tails}
   <h4 class="my-8">Coin Flip Simulator</h4>
-  <!-- <caption>Number of coin flips: {val}</caption> -->
-  <!-- <Slider min="1" max="100" bind:value={val} on:change={getFlip(val)} /> -->
+  <caption>Number of coin flips: {val}</caption>
+  <Slider min="1" max="100" bind:value={val} on:change={getFlip} />
   
-  <caption>Number of coin flips:</caption>
+  <!-- <caption>Number of coin flips:</caption>
   <input type=int bind:value={val}>
-  <button on:click={getFlip}>Submit</button>
+  <button on:click={getFlip}>Submit</button> -->
 
 
 </div>

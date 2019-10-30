@@ -28,6 +28,7 @@
   $: path = $page.path;
 
   const projects = [
+                       { to: "/get-rand", text: "Get Random Integer (easy flask)" },
                        { to: "/coinflip", text: "Coin Flip" }
                   ];
 
